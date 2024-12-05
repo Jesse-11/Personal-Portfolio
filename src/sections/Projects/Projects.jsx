@@ -1,8 +1,8 @@
 import styles from './ProjectsStyles.module.css';
-import viberr from '../../assets/viberr.png';
-import freshBurger from '../../assets/fresh-burger.png';
-import hipsster from '../../assets/hipsster.png';
-import fitLift from '../../assets/fitlift.png';
+import Med from '../../assets/Med4You.webp';
+import Darxi from '../../assets/Darxi.png';
+import Amaf from '../../assets/AMAF.png';
+import Stock from '../../assets/Stock.webp';
 import ProjectCard from '../../common/ProjectCard';
 
 function Projects() {
@@ -11,26 +11,26 @@ function Projects() {
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <ProjectCard
-          src={viberr}
-          link=""
+          src={Amaf}
+          link="https://github.com/UAdelaide/24S1_WDC_UG_Group_5"
           h3="AMAF"
           p="Marine Volunteer App"
         />
         <ProjectCard
-          src={freshBurger}
-          link=""
+          src={Darxi}
+          link="https://github.com/Jesse-11/Darxi"
           h3="Darxi"
           p="GUI Newtorking Dashboard"
         />
         <ProjectCard
-          src={hipsster}
-          link=""
+          src={Med}
+          link="https://github.com/Jesse-11/Qt-Application-Startup"
           h3="Med4You"
           p="Medical GUI Dashboard"
         />
         <ProjectCard
-          src={fitLift}
-          link=""
+          src={Stock}
+          link="https://github.com/Jesse-11/OOP-InvestmentSimulator"
           h3="StockX"
           p="API Stock Market Portal"
         />

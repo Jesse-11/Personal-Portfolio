@@ -43,15 +43,15 @@ function Hero() {
             </h1>
             <h2>Software Engineer</h2>
             <span>
-                <a href="https://twitter.com/" target="_blank">
+                <a href="https://twitter.com/TheScottishClub" target="_blank">
                     <img src={twitterIcon} alt="Twitter Icon" />
                 </a>
 
-                <a href="https://github.com/" target="_blank">
+                <a href="https://github.com/Jesse-11" target="_blank">
                     <img src={githubIcon} alt="Github Icon" />
                 </a>
 
-                <a href="https://linkedin.com/" target="_blank">
+                <a href="https://linkedin.com/in/jesse11" target="_blank">
                     <img src={linkedinIcon} alt="Linkedin Icon" />
                 </a>
             </span>
