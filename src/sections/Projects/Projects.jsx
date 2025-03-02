@@ -3,6 +3,7 @@ import Med from '../../assets/Med4You.webp';
 import Discord from '../../assets/Discord-bot.png';
 import Amaf from '../../assets/AMAF.png';
 import Stock from '../../assets/Stock.webp';
+import Website from '../../assets/hero-img.png';
 import ProjectCard from '../../common/ProjectCard';
 
 function Projects() {
@@ -10,7 +11,7 @@ function Projects() {
   const projectsData = [
     {
       src: Amaf,
-      link: "https://github.com/UAdelaide/2451_WDC_UG_Group_5",
+      link: "https://github.com/Jesse-11/Volunteer-Event-Webpage",
       h3: "AMAF",
       p: "Marine Volunteer App",
       technologies: ["Vue", "AJAX", "Express", "MySQL"]
@@ -35,6 +36,13 @@ function Projects() {
       h3: "StockX",
       p: "API Stock Market Portal",
       technologies: ["C++", "API"]
+    }, 
+    {
+      src: Website,
+      link: "https://github.com/Jesse-11/Personal-Portfolio",
+      h3: "Portfolio",
+      p: "Personal Website",
+      technologies: ["React", "Figma", "CSS"]	
     }
   ]
 

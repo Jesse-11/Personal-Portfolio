@@ -1,12 +1,15 @@
 import styles from './FooterStyles.module.css';
 
 function Footer() {
+
+  const currentYear = new Date().getFullYear();
+
   return (
-    <section id="footer" className={styles.container}>
-      <p>
-        &copy; 2024 Jesse Hoppo. <br />
-        All rights reserved.
-      </p>
+    <section  className={styles.footer}>
+      <footer>
+      &copy; {currentYear} Jesse Hoppo. All rights reserved.
+        
+      </footer>
     </section>
   );
 }

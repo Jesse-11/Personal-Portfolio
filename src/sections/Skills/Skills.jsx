@@ -1,37 +1,72 @@
 import styles from './SkillsStyles.module.css';
 import checkMarkIconDark from '../../assets/checkmark-dark.svg';
 import checkMarkIconLight from '../../assets/checkmark-light.svg';
-import SkillList from '../../common/SkillList';
 import { useTheme } from '../../common/ThemeContext';
 
 function Skills() {
   const { theme } = useTheme();
   const checkMarkIcon = theme === 'light' ? checkMarkIconLight : checkMarkIconDark;
 
+  // First group of skills
+  const coreSkills = [
+    "C/C++", 
+    "Python", 
+    "HTML/CSS/JS", 
+    "HDL/Assembly", 
+    "mySQL"
+  ];
+  
+  // Second group of skills
+  const frameworkSkills = [
+    "React", 
+    "AJAX", 
+    "Vue", 
+    "QT", 
+    "Rest API"
+  ];
+  
+  // Third group of skills
+  const toolsSkills = [
+    "Git", 
+    "Jira", 
+    "Agile", 
+    "Unix (Ubuntu/Kali)"
+  ];
+
   return (
     <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">Skills</h1>
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="C/C++" />
-        <SkillList src={checkMarkIcon} skill="Python" />
-        <SkillList src={checkMarkIcon} skill="HTML/CSS/JS" />
-        <SkillList src={checkMarkIcon} skill="HDL/Assembly" />
-        <SkillList src={checkMarkIcon} skill="mySQL" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="React" />
-        <SkillList src={checkMarkIcon} skill="AJAX" />
-        <SkillList src={checkMarkIcon} skill="Vue" />
-        <SkillList src={checkMarkIcon} skill="QT" />
-        <SkillList src={checkMarkIcon} skill="Rest API" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="Git" />
-        <SkillList src={checkMarkIcon} skill="Jira" />
-        <SkillList src={checkMarkIcon} skill="Agile" />
-        <SkillList src={checkMarkIcon} skill="Unix (Ubuntu/Kali)" />
+      <h1 className={styles.sectionTitle}>Skills</h1>
+      <div className={styles.skillsWrapper}>
+        <div className={styles.skillList}>
+          {coreSkills.map((skill, index) => (
+            <div key={index} className={styles.skillItem}>
+              <img src={checkMarkIcon} alt="Checkmark icon" />
+              <p>{skill}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className={styles.divider}></div>
+        
+        <div className={styles.skillList}>
+          {frameworkSkills.map((skill, index) => (
+            <div key={index} className={styles.skillItem}>
+              <img src={checkMarkIcon} alt="Checkmark icon" />
+              <p>{skill}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div className={styles.divider}></div>
+        
+        <div className={styles.skillList}>
+          {toolsSkills.map((skill, index) => (
+            <div key={index} className={styles.skillItem}>
+              <img src={checkMarkIcon} alt="Checkmark icon" />
+              <p>{skill}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

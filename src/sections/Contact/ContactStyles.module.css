@@ -1,80 +1,130 @@
+/* ContactStyles.module.css */
 .container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px 24px 80px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 60px;
+  font-weight: 800;
+  color: var(--text-color);
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: #5d5dff;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 500px; /* Control the form width */
+  margin: 0 auto;
+}
+
+.formGroup {
+  position: relative;
+  width: 100%;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px 16px; /* Reduced vertical padding */
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--text-color);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensure padding doesn't add to width */
+}
+
+.input {
+  height: 45px; /* Reduced height */
+}
+
+.textarea {
+  min-height: 150px; /* Adjusted height */
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #5d5dff;
+  box-shadow: 0 0 0 2px rgba(93, 93, 255, 0.2);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--form-text-color);
+  opacity: 0.7;
+}
+
+.submitButton {
+  background-color: #5d5dff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px; /* Reduced padding */
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  align-self: center;
+  margin-top: 10px;
+  width: auto; /* Let it size to content */
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  background-color: #4a4ad8;
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 16px 60px;
   }
   
-form {
-display: flex;
-flex-direction: column;
-gap: 30px;
-}
-
-textarea,
-input:not([type='submit']) {
-height: 50px;
-padding-left: 16px;
-width: 250px;
-}
-
-textarea {
-padding-top: 16px;
-resize: none;
-height: 250px;
-}
-
-input,
-textarea {
-border-radius: 20px;
-border: #888 1px solid;
-box-sizing: border-box;
-justify-self: center;
-background-color: var(--background-color);
-color: var(--form-text-color);
-}
-
-::placeholder {
-color: var(--form-text-color);
-}
-
-input[type='submit'] {
-background-color: var(--btn-color);
-color: var(--btn-text-color);
-border: none;
-border-radius: 20px;
-width: 126px;
-height: 50px;
-font-size: 20px;
-font-weight: bold;
-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
-margin: auto;
-}
-
-input[type='submit']:hover {
-transform: scale(1.05);
-}
-
-input[type='submit']:active {
-transform: translateY(2px);
-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-
-@media (width >= 800px) {
-  textarea,
-  input:not([type='submit']) {
-    width: 600px;
-    font-size: 20px;
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 50px;
   }
-  form {
-    gap: 40px;
+  
+  .form {
+    gap: 20px;
+    max-width: 90%;
   }
 }
 
-@media (width >= 1400px) {
-  textarea,
-  input:not([type='submit']) {
-    width: 800px;
+@media (max-width: 480px) {
+  .form {
+    max-width: 100%;
   }
 }
