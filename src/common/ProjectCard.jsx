@@ -1,35 +1,26 @@
 import React from 'react';
+import styles from './ProjectCard.module.css';
 
-function ProjectCard({ src, link, h3, p }) {
+function ProjectCard({ src, link, h3, p, technologies }) {
   return (
-
-    <div className="project-card">
+    <div className={styles.projectCard}>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <div className="project-image">
+        <div className={styles.projectImage}>
           <img src={src} alt={`${h3} logo`} />
         </div>
-        <div className="project-info">
+        <div className={styles.projectInfo}>
           <h3>{h3}</h3>
-          <p className="project-description">{p}</p>
+          <p className={styles.projectDescription}>{p}</p>
           {technologies && technologies.length > 0 && (
-            <div className="project-technologies">
+            <div className={styles.projectTechnologies}>
               {technologies.map((tech, index) => (
-                <span key={index} className="technology-tag">{tech}</span>
+                <span key={index} className={styles.technologyTag}>{tech}</span>
               ))}
             </div>
           )}
         </div>
       </a>
     </div>
-
-    /*
-    <a href={link} target="_blank">
-      <img className="hover" src={src} alt={`${h3} logo`} />
-      <h3>{h3}</h3>
-      <p>{p}</p>
-    </a>
-
-    */
   );
 }
 

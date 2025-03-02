@@ -1,0 +1,77 @@
+.projectCard {
+    background-color: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projectCard a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+    background-color: var(--project-card-bg);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .projectImage img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+  .projectInfo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .projectInfo h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .projectDescription {
+    margin: 0 0 15px 0;
+    color: var(--form-text-color);
+    font-size: 14px;
+  }
+  
+  .projectTechnologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+  }
+  
+  .technologyTag {
+    background-color: rgba(128, 128, 128, 0.1);
+    color: var(--form-text-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-family: 'Roboto Mono', monospace;
+  }
