@@ -57,8 +57,8 @@ function Hero() {
             </span>
             
             <p className={styles.description}>
-                With a passion for developing Software Applciations within the 
-                AI and Defense Sector
+                With a passion for developing Software Applications within the 
+                Quant and Cyber Security space.
             </p>
 
             <a href={CV} download>
