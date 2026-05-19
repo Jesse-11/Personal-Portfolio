@@ -24,7 +24,7 @@ function Skills() {
     },
     {
       title: "Security & Diagnostics",
-      summary: "Security coursework and tooling for web, memory, and network investigation.",
+      summary: "Security-based coursework, software, and tooling for web, memory, and network investigation.",
       skills: ["GDB", "Ghidra", "Burp Suite", "Nmap", "Metasploit", "Wireshark", "XSS", "CSRF"]
     },
     {

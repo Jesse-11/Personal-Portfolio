@@ -2,17 +2,19 @@ import styles from './ProjectsStyles.module.css';
 import Med from '../../assets/Med4You.webp';
 import Discord from '../../assets/Discord-bot.png';
 import Amaf from '../../assets/AMAF.png';
+import DeadMansDraw from '../../assets/DeadMansDraw.png';
+import InFlow from '../../assets/InFlow.webp';
 import Website from '../../assets/Website.png';
 import ProjectCard from '../../common/ProjectCard';
 
 function Projects() {
   const projectsData = [
     {
+      src: InFlow,
       codeUrl: "https://github.com/Jesse-11/InFlow",
       demoUrl: "",
       title: "InFlow",
       status: "Private MVP",
-      visualLabel: "IF",
       isPrivate: true,
       description: "Accounts receivable SaaS MVP with invoice/customer workflows, payment forecasting, reminder automation, CSV import, local demo persistence, and an Auth.js workspace foundation.",
       technologies: ["Next.js App Router", "TypeScript", "React", "Prisma", "PostgreSQL", "Auth.js", "Tailwind CSS", "Vitest", "CSV Import"]
@@ -26,12 +28,11 @@ function Projects() {
       technologies: ["Vue", "Express", "MySQL", "AJAX", "REST APIs", "Full-stack"]
     },
     {
+      src: DeadMansDraw,
       codeUrl: "https://github.com/Jesse-11/DeadMansDraw",
       demoUrl: "",
       title: "DeadMansDraw",
-      status: "Private project",
-      visualLabel: "DMD",
-      isPrivate: true,
+      status: "Featured project",
       description: "C++ terminal card game implementation of Dead Man's Draw, focused on game-state modelling, command-line interaction, and turn logic.",
       technologies: ["C++", "Terminal UI", "Game Logic", "OOP", "Data Structures"]
     },
