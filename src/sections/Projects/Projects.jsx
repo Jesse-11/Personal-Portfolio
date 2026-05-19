@@ -8,12 +8,32 @@ import ProjectCard from '../../common/ProjectCard';
 function Projects() {
   const projectsData = [
     {
+      codeUrl: "https://github.com/Jesse-11/InFlow",
+      demoUrl: "",
+      title: "InFlow",
+      status: "Private MVP",
+      visualLabel: "IF",
+      isPrivate: true,
+      description: "Invoice follow-up and accounts receivable SaaS prototype for small businesses, with local demo workflows and a database/auth foundation.",
+      technologies: ["Next.js", "TypeScript", "React", "Prisma", "PostgreSQL", "Auth.js", "Tailwind", "Vitest"]
+    },
+    {
       src: Amaf,
       codeUrl: "https://github.com/Jesse-11/Volunteer-Event-Webpage",
       demoUrl: "",
       title: "Marine Volunteering",
       description: "Volunteer event platform for coordinating marine conservation activity and community participation.",
       technologies: ["Vue", "Express", "MySQL", "AJAX", "REST APIs", "Full-stack"]
+    },
+    {
+      codeUrl: "https://github.com/Jesse-11/DeadMansDraw",
+      demoUrl: "",
+      title: "DeadMansDraw",
+      status: "Private project",
+      visualLabel: "DMD",
+      isPrivate: true,
+      description: "C++ terminal card game implementation of Dead Man's Draw, focused on game-state modelling, command-line interaction, and turn logic.",
+      technologies: ["C++", "Terminal UI", "Game Logic", "OOP", "Data Structures"]
     },
     {
       src: Discord,
@@ -50,11 +70,14 @@ function Projects() {
             key={project.title}
             src={project.src}
             codeUrl={project.codeUrl}
-            demoUrl={project.demoUrl}
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-          />
+          demoUrl={project.demoUrl}
+          title={project.title}
+          description={project.description}
+          technologies={project.technologies}
+          visualLabel={project.visualLabel}
+          isPrivate={project.isPrivate}
+          status={project.status}
+        />
         ))}
       </div>
     </section>

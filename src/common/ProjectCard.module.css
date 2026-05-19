@@ -30,6 +30,26 @@
     max-height: 80%;
     object-fit: contain;
   }
+
+  .projectPlaceholder {
+    align-items: center;
+    background:
+      linear-gradient(135deg, rgba(93, 93, 255, 0.18), rgba(9, 135, 242, 0.08)),
+      radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.7), transparent 28%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-control);
+    display: flex;
+    height: 118px;
+    justify-content: center;
+    width: min(72%, 260px);
+  }
+
+  .projectPlaceholder span {
+    color: var(--accent-color);
+    font-family: 'Rubik', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+  }
   
   .projectInfo {
     padding: 22px;
