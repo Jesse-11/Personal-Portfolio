@@ -37,9 +37,7 @@ function Hero() {
 
         <div className={styles.info}>
             <h1>
-                Jesse 
-                <br />
-                Hoppo
+                Jesse Hoppo
             </h1>
             <h2>Software Engineer</h2>
             <span>
@@ -57,8 +55,8 @@ function Hero() {
             </span>
             
             <p className={styles.description}>
-                With a passion for developing Software Applications within the 
-                Quant and Cyber Security space.
+                Passionate about building software with real-world impact. Experinced 
+                in full-stack and infrastructure development.
             </p>
 
             <a href={CV} download>

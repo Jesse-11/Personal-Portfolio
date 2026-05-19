@@ -81,7 +81,7 @@
 }
 
 .submitButton {
-  background-color: #5d5dff;
+  background-color: var(--btn-color);
   color: white;
   border: none;
   border-radius: 8px;
