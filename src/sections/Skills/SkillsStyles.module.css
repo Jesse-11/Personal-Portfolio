@@ -10,33 +10,15 @@
 .intro {
   color: var(--form-text-color);
   line-height: 1.7;
-  margin: 0 auto 28px;
+  margin: 0 auto 44px;
   max-width: 76ch;
-}
-
-.highlightBar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin: 0 auto 42px;
-  max-width: 920px;
-}
-
-.highlightBar span {
-  border: 1px solid var(--border-color);
-  border-radius: 999px;
-  color: var(--text-color);
-  font-family: 'Roboto Mono', monospace;
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 10px 14px;
 }
 
 .skillsWrapper {
   display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   text-align: left;
 }
 
@@ -47,7 +29,6 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
-  min-height: 100%;
   padding: 22px;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
@@ -92,7 +73,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: auto;
 }
 
 .skillItem {
@@ -119,9 +99,5 @@
 
   .skillsWrapper {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .highlightBar {
-    justify-content: flex-start;
   }
 }

@@ -5,22 +5,22 @@ function Skills() {
     {
       title: "Languages",
       summary: "Comfortable moving between low-level systems work, scripting, and application development.",
-      skills: ["C/C++", "Python", "Java", "R", "JavaScript", "SQL"]
+      skills: ["C/C++", "Python", "Java", "R", "JS/TS", "SQL/PL/pgSQL"]
     },
     {
       title: "Systems & Backend",
       summary: "Backend fundamentals from networking and concurrency through database internals and APIs.",
-      skills: ["Distributed Systems", "Networking", "Concurrency", "Memory Optimization", "REST APIs", "Oracle Pipelines"]
+      skills: ["Distributed Systems", "Networking", "Concurrency", "Memory Optimization", "REST APIs", "SQL Pipelines"]
     },
     {
       title: "DevOps & Infrastructure",
       summary: "Automation and deployment work across Linux environments and internal engineering workflows.",
-      skills: ["Docker", "Podman", "Azure DevOps", "CI/CD", "ELK Stack", "RHEL", "Ubuntu", "Pyinfra"]
+      skills: ["Docker", "Podman", "Azure DevOps", "CI/CD", "ELK Stack", "RHEL", "Ubuntu/Arch", "Pyinfra"]
     },
     {
       title: "Frontend & Product",
       summary: "User-facing tools, dashboards, and CMS-backed workflows with attention to accessibility.",
-      skills: ["React", "Vue", "Qt", "R Shiny", "Wagtail CMS", "Django", "WCAG", "Figma"]
+      skills: ["React", "NextJS", "Vue", "Qt", "R Shiny", "Wagtail CMS", "Django", "WCAG", "Figma"]
     },
     {
       title: "Security & Diagnostics",
@@ -29,30 +29,18 @@ function Skills() {
     },
     {
       title: "Delivery & Collaboration",
-      summary: "Practical team delivery habits from internship and capstone environments.",
-      skills: ["Git", "GitHub", "Jira", "Confluence", "Agile", "Scrum Lead", "Technical Docs"]
+      summary: "Team-oriented engineering habits for planning, documenting, reviewing, and shipping work.",
+      skills: ["Git", "GitHub", "Jira", "Confluence", "Agile", "Technical Docs"]
     }
-  ];
-
-  const experienceHighlights = [
-    "Software Engineering Intern at AEMO",
-    "University of Adelaide Software Engineering Honours",
-    "Capstone Scrum Lead for a Heart Failure Portal prototype"
   ];
 
   return (
     <section id="skills" className={styles.container}>
       <h1 className="sectionTitle">Skills</h1>
       <p className={styles.intro}>
-        A practical mix of systems engineering, backend development, infrastructure automation,
-        and product delivery shaped by internship, capstone, and project work.
+        A focused technical toolkit across systems programming, backend services,
+        infrastructure, security, and user-facing product work.
       </p>
-
-      <div className={styles.highlightBar}>
-        {experienceHighlights.map((highlight) => (
-          <span key={highlight}>{highlight}</span>
-        ))}
-      </div>
 
       <div className={styles.skillsWrapper}>
         {skillGroups.map((group) => (

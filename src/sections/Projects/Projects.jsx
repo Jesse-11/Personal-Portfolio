@@ -27,7 +27,7 @@ function Projects() {
       src: Med,
       codeUrl: "https://github.com/Jesse-11/Qt-Application-Startup",
       demoUrl: "",
-      title: "Medical Dashboard",
+      title: "Telehealth Application",
       description: "Cross-platform healthcare prototype covering consultations, prescriptions, appointments, and user health overviews.",
       technologies: ["C++", "Qt", "WCAG", "Git", "Jira", "Confluence"]
     },
