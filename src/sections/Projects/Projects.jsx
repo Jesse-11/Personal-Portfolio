@@ -4,6 +4,7 @@ import Discord from '../../assets/Discord-bot.png';
 import Amaf from '../../assets/AMAF.png';
 import DeadMansDraw from '../../assets/DeadMansDraw.png';
 import InFlow from '../../assets/InFlow.webp';
+import RockPaperScissors from '../../assets/RockPaperScissors.png';
 import Website from '../../assets/Website.png';
 import ProjectCard from '../../common/ProjectCard';
 
@@ -37,11 +38,11 @@ function Projects() {
       technologies: ["C++", "Terminal UI", "Game Logic", "OOP", "Data Structures"]
     },
     {
+      src: RockPaperScissors,
       codeUrl: "https://github.com/Jesse-11/Odin-RPS",
       demoUrl: "https://odinrps.netlify.app/",
       title: "Odin RPS",
       status: "Live demo",
-      visualLabel: "RPS",
       description: "Interactive Rock Paper Scissors game built for The Odin Project, focused on DOM interaction, game-state handling, and deployable frontend fundamentals.",
       technologies: ["JavaScript", "HTML", "CSS", "DOM", "Game Logic", "Netlify"]
     },
@@ -64,7 +65,7 @@ function Projects() {
     {
       src: Website,
       codeUrl: "https://github.com/Jesse-11/Personal-Portfolio",
-      demoUrl: "",
+      demoUrl: "https://jesse-hoppo.netlify.app/",
       title: "My Portfolio",
       description: "Responsive React portfolio deployed with Netlify and tuned around a maintainable component and styling system.",
       technologies: ["React", "Vite", "Netlify", "CSS Modules", "ESLint"]
