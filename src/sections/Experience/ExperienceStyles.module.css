@@ -18,7 +18,9 @@
 }
 
 .experienceCard {
-  background: linear-gradient(135deg, rgba(93, 93, 255, 0.08), transparent 46%);
+  background:
+    linear-gradient(135deg, rgba(93, 93, 255, 0.08), transparent 46%),
+    linear-gradient(180deg, var(--accent-secondary-soft), transparent 44%);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-control);
   display: grid;
@@ -35,7 +37,8 @@
 }
 
 .cardMeta span {
-  background-color: rgba(93, 93, 255, 0.1);
+  background-color: var(--accent-secondary-soft);
+  border: 1px solid var(--accent-secondary-border);
   border-radius: 999px;
   color: var(--text-color);
   display: inline-flex;

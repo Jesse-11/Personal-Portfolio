@@ -16,7 +16,7 @@
 }
 
 .eyebrow {
-  color: var(--accent-color);
+  color: var(--accent-secondary-color);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -40,7 +40,9 @@
 }
 
 .noteCard {
-  background: linear-gradient(135deg, rgba(93, 93, 255, 0.08), transparent 45%);
+  background:
+    linear-gradient(135deg, rgba(93, 93, 255, 0.08), transparent 45%),
+    linear-gradient(180deg, var(--accent-secondary-soft), transparent 42%);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-control);
   padding: 22px;

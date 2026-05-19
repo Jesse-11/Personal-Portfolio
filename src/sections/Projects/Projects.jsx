@@ -37,6 +37,15 @@ function Projects() {
       technologies: ["C++", "Terminal UI", "Game Logic", "OOP", "Data Structures"]
     },
     {
+      codeUrl: "https://github.com/Jesse-11/Odin-RPS",
+      demoUrl: "https://odinrps.netlify.app/",
+      title: "Odin RPS",
+      status: "Live demo",
+      visualLabel: "RPS",
+      description: "Interactive Rock Paper Scissors game built for The Odin Project, focused on DOM interaction, game-state handling, and deployable frontend fundamentals.",
+      technologies: ["JavaScript", "HTML", "CSS", "DOM", "Game Logic", "Netlify"]
+    },
+    {
       src: Discord,
       codeUrl: "https://github.com/Jesse-11/DracoX",
       demoUrl: "",

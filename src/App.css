@@ -4,6 +4,9 @@
     --btn-hover-color: #0874cf;
     --btn-text-color: #fff;
     --accent-color: #5d5dff;
+    --accent-secondary-color: #10b981;
+    --accent-secondary-soft: rgba(16, 185, 129, 0.12);
+    --accent-secondary-border: rgba(16, 185, 129, 0.32);
     --focus-ring-color: rgba(93, 93, 255, 0.2);
     --project-card-bg: #ffffff00;
     --text-color: #222;
@@ -23,6 +26,9 @@
     --btn-color: #fff;
     --btn-hover-color: #e8e8e8;
     --btn-text-color: #222;
+    --accent-secondary-color: #34d399;
+    --accent-secondary-soft: rgba(52, 211, 153, 0.14);
+    --accent-secondary-border: rgba(52, 211, 153, 0.34);
     --project-card-bg: #fff;
     --text-color: #fff;
     --form-text-color: #fff;
@@ -101,7 +107,7 @@ section {
     position: absolute;
     width: 60px;
     height: 4px;
-    background-color: var(--accent-color);
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary-color));
     bottom: -15px;
     left: 50%;
     transform: translateX(-50%);

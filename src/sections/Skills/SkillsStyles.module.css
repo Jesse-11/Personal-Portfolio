@@ -23,7 +23,9 @@
 }
 
 .skillCard {
-  background: linear-gradient(180deg, rgba(93, 93, 255, 0.08), transparent 42%);
+  background:
+    linear-gradient(180deg, rgba(93, 93, 255, 0.08), transparent 42%),
+    linear-gradient(135deg, var(--accent-secondary-soft), transparent 36%);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-control);
   display: flex;
@@ -47,7 +49,7 @@
 
 .skillCardHeader span {
   align-items: center;
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color));
   border-radius: var(--radius-md);
   color: #fff;
   display: inline-flex;
