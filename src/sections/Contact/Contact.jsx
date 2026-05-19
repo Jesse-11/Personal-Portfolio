@@ -1,10 +1,6 @@
-import React from 'react';
 import styles from './ContactStyles.module.css';
 
 function Contact() {
-  // Get the current year for copyright
-  const currentYear = new Date().getFullYear();
-  
   return (
     <section id="contact" className={styles.container}>
       <h1 className={styles.sectionTitle}>Contact</h1>
