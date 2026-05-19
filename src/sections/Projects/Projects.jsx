@@ -23,8 +23,9 @@ function Projects() {
     {
       src: Amaf,
       codeUrl: "https://github.com/Jesse-11/Volunteer-Event-Webpage",
-      demoUrl: "",
+      demoUrl: "https://marine-volunteering.netlify.app",
       title: "Marine Volunteering",
+      status: "Live demo",
       description: "Volunteer event platform for coordinating marine conservation activity and community participation.",
       technologies: ["Vue", "Express", "MySQL", "AJAX", "REST APIs", "Full-stack"]
     },
