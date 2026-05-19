@@ -4,28 +4,6 @@
   padding: 100px 24px 60px;
 }
 
-.sectionTitle {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 60px;
-  font-weight: 800;
-  color: var(--text-color);
-  font-family: 'Rubik', sans-serif;
-  text-transform: uppercase;
-  position: relative;
-}
-
-.sectionTitle::after {
-  content: '';
-  position: absolute;
-  width: 60px;
-  height: 4px;
-  background-color: #5d5dff;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .projectsContainer {
   display: flex;
   flex-wrap: wrap;
@@ -49,11 +27,6 @@
   .projectsContainer > div {
     flex: 0 0 100%;
     max-width: 350px;
-  }
-  
-  .sectionTitle {
-    font-size: 28px;
-    margin-bottom: 50px;
   }
   
   .projects {

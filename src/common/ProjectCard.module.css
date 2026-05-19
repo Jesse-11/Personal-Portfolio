@@ -1,17 +1,17 @@
 .projectCard {
     background-color: transparent;
-    border-radius: 12px;
+    border-radius: var(--radius-control);
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(128, 128, 128, 0.2);
+    border: 1px solid var(--border-color);
   }
   
   .projectCard:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-md);
   }
   
   .projectCard a {
@@ -27,7 +27,6 @@
     height: 180px;
     display: flex;
     justify-content: center;
-    background-color: transparent;
     align-items: center;
     background-color: var(--project-card-bg);
     position: relative;
@@ -71,7 +70,7 @@
     background-color: rgba(128, 128, 128, 0.1);
     color: var(--form-text-color);
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     font-size: 0.7rem;
     font-family: 'Roboto Mono', monospace;
   }

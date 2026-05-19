@@ -50,7 +50,7 @@ function Projects() {
 
   return (
     <section id="projects" className={styles.projects}>
-    <h1 className={styles.sectionTitle}>Projects</h1>
+    <h1 className="sectionTitle">Projects</h1>
     <div className={styles.projectsContainer}>
       {projectsData.map((project, index) => (
         <ProjectCard

@@ -3,7 +3,7 @@ import styles from './ContactStyles.module.css';
 function Contact() {
   return (
     <section id="contact" className={styles.container}>
-      <h1 className={styles.sectionTitle}>Contact</h1>
+      <h1 className="sectionTitle">Contact</h1>
       <form 
         className={styles.form}
         action="https://formspree.io/f/xjkvlqpa"
@@ -38,7 +38,7 @@ function Contact() {
             required
           ></textarea>
         </div>
-        <button className={styles.submitButton} type="submit">
+        <button className={`${styles.submitButton} button`} type="submit">
           Submit
         </button>
       </form>

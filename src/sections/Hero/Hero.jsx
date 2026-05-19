@@ -41,15 +41,15 @@ function Hero() {
             </h1>
             <h2>Software Engineer</h2>
             <span>
-                <a href="https://twitter.com/TheScottishClub" target="_blank">
+                <a href="https://twitter.com/TheScottishClub" target="_blank" rel="noopener noreferrer">
                     <img src={twitterIcon} alt="Twitter Icon" />
                 </a>
 
-                <a href="https://github.com/Jesse-11" target="_blank">
+                <a href="https://github.com/Jesse-11" target="_blank" rel="noopener noreferrer">
                     <img src={githubIcon} alt="Github Icon" />
                 </a>
 
-                <a href="https://linkedin.com/in/jesse11" target="_blank">
+                <a href="https://linkedin.com/in/jesse11" target="_blank" rel="noopener noreferrer">
                     <img src={linkedinIcon} alt="Linkedin Icon" />
                 </a>
             </span>
@@ -60,7 +60,7 @@ function Hero() {
             </p>
 
             <a href={CV} download>
-                <button className='hover'>
+                <button className="button">
                     Resume
                 </button>
             </a>
@@ -69,4 +69,4 @@ function Hero() {
   );
 }
 
-export default Hero 
+export default Hero
