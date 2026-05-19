@@ -14,8 +14,8 @@ function Projects() {
       status: "Private MVP",
       visualLabel: "IF",
       isPrivate: true,
-      description: "Invoice follow-up and accounts receivable SaaS prototype for small businesses, with local demo workflows and a database/auth foundation.",
-      technologies: ["Next.js", "TypeScript", "React", "Prisma", "PostgreSQL", "Auth.js", "Tailwind", "Vitest"]
+      description: "Accounts receivable SaaS MVP with invoice/customer workflows, payment forecasting, reminder automation, CSV import, local demo persistence, and an Auth.js workspace foundation.",
+      technologies: ["Next.js App Router", "TypeScript", "React", "Prisma", "PostgreSQL", "Auth.js", "Tailwind CSS", "Vitest", "CSV Import"]
     },
     {
       src: Amaf,
@@ -70,14 +70,14 @@ function Projects() {
             key={project.title}
             src={project.src}
             codeUrl={project.codeUrl}
-          demoUrl={project.demoUrl}
-          title={project.title}
-          description={project.description}
-          technologies={project.technologies}
-          visualLabel={project.visualLabel}
-          isPrivate={project.isPrivate}
-          status={project.status}
-        />
+            demoUrl={project.demoUrl}
+            title={project.title}
+            description={project.description}
+            technologies={project.technologies}
+            visualLabel={project.visualLabel}
+            isPrivate={project.isPrivate}
+            status={project.status}
+          />
         ))}
       </div>
     </section>

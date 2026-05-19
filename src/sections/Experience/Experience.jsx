@@ -50,7 +50,7 @@ function Experience() {
 
       <div className={styles.timeline}>
         {experienceItems.map((item) => (
-          <article key={`${item.role}-${item.organization}`} className={styles.experienceCard}>
+          <article key={`${item.role}-${item.organization}`} className={`${styles.experienceCard} revealOnScroll`}>
             <div className={styles.cardMeta}>
               <span>{item.period}</span>
             </div>

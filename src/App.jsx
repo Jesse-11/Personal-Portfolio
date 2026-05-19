@@ -1,4 +1,5 @@
 import './App.css'
+import About from './sections/About/About'
 import Contact from './sections/Contact/Contact'
 import Experience from './sections/Experience/Experience'
 import Footer from './sections/Footer/Footer'
@@ -13,6 +14,7 @@ function App() {
     <>
       <NavBar />
       <Hero />
+      <About />
       <Experience />
       <Projects />
       <Skills />

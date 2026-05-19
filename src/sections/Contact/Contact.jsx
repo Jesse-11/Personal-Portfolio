@@ -4,7 +4,7 @@ function Contact() {
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-      <div className={styles.contactShell}>
+      <div className={`${styles.contactShell} revealOnScroll`}>
         <div className={styles.contactInfo}>
           <p className={styles.eyebrow}>Get in touch</p>
           <h2>Have a role, project, or idea worth building?</h2>

@@ -44,7 +44,7 @@ function Skills() {
 
       <div className={styles.skillsWrapper}>
         {skillGroups.map((group) => (
-          <article key={group.title} className={styles.skillCard}>
+          <article key={group.title} className={`${styles.skillCard} revealOnScroll`}>
             <div className={styles.skillCardHeader}>
               <span>{group.title.slice(0, 2)}</span>
               <h2>{group.title}</h2>

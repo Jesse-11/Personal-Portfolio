@@ -68,8 +68,8 @@
 
 @media (max-width: 560px) {
   .header {
-    gap: 8px;
-    padding-left: 10px;
+    gap: 6px;
+    padding: 7px 8px;
     width: min(calc(100% - 20px), 420px);
   }
 
@@ -79,7 +79,17 @@
   }
 
   .nav a {
-    font-size: 0.72rem;
-    padding: 11px 5px;
+    font-size: 0.68rem;
+    padding: 11px 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand {
+    display: none;
+  }
+
+  .nav a {
+    font-size: 0.66rem;
   }
 }

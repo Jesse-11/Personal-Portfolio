@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import styles from './NavBar.module.css';
 
 const navItems = [
+  { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },

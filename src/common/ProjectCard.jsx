@@ -12,7 +12,7 @@ function ProjectCard({
   status = 'Featured project'
 }) {
   return (
-    <div className={styles.projectCard}>
+    <div className={`${styles.projectCard} revealOnScroll`}>
       <div className={styles.projectImage}>
         {src ? (
           <img src={src} alt={`${title} preview`} />
