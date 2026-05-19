@@ -8,7 +8,7 @@ import githubLight from '../../assets/github-light.svg'
 import githubDark from '../../assets/github-dark.svg'
 import linkedinLight from '../../assets/linkedin-light.svg'
 import linkedinDark from '../../assets/linkedin-dark.svg'
-import CV from '../../assets/Jesse-Hoppo-Software-Resume.pdf'
+import CV from '../../assets/Jesse Hoppo - Software Resume.pdf'
 import {useTheme} from '../../common/ThemeContext'
 
 function Hero() {
@@ -55,8 +55,8 @@ function Hero() {
             </span>
             
             <p className={styles.description}>
-                Passionate about building software with real-world impact. Experinced 
-                in full-stack and infrastructure development.
+                Software engineering student and AEMO intern focused on backend systems,
+                infrastructure automation, observability, and reliable developer workflows.
             </p>
 
             <a href={CV} download>

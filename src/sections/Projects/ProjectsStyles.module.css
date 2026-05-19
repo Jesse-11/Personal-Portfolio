@@ -5,28 +5,18 @@
 }
 
 .projectsContainer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 30px;
-  justify-content: center;
 }
 
 .projectsContainer > div {
-  flex: 0 0 calc(33.333% - 30px);
-  min-width: 280px;
-  max-width: 350px;
-}
-
-@media (max-width: 1024px) {
-  .projectsContainer > div {
-    flex: 0 0 calc(50% - 30px);
-  }
+  min-width: 0;
 }
 
 @media (max-width: 768px) {
-  .projectsContainer > div {
-    flex: 0 0 100%;
-    max-width: 350px;
+  .projectsContainer {
+    grid-template-columns: minmax(0, 1fr);
   }
   
   .projects {
