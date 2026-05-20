@@ -67,6 +67,20 @@
   transform: translateY(-2px);
 }
 
+.contactLinks .resumeDownload {
+  background-color: var(--btn-color);
+  border-color: var(--btn-color);
+  color: var(--btn-text-color);
+  margin-top: 6px;
+  text-align: center;
+}
+
+.contactLinks .resumeDownload:hover {
+  background-color: var(--btn-hover-color);
+  border-color: var(--btn-hover-color);
+  color: var(--btn-text-color);
+}
+
 .form {
   display: flex;
   flex-direction: column;

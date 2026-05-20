@@ -1,72 +1,67 @@
-import styles from './HeroStyles.module.css'
-import heroImg from '../../assets/hero-img.png'
-import sun from '../../assets/sun.svg'
-import moon from '../../assets/moon.svg'
-import twitterLight from '../../assets/twitter-light.svg'
-import twitterDark from '../../assets/twitter-dark.svg'
-import githubLight from '../../assets/github-light.svg'
-import githubDark from '../../assets/github-dark.svg'
-import linkedinLight from '../../assets/linkedin-light.svg'
-import linkedinDark from '../../assets/linkedin-dark.svg'
-import CV from '../../assets/Jesse Hoppo - Software Resume.pdf'
-import {useTheme} from '../../common/ThemeContext'
+import styles from './HeroStyles.module.css';
+import githubLight from '../../assets/github-light.svg';
+import githubDark from '../../assets/github-dark.svg';
+import linkedinLight from '../../assets/linkedin-light.svg';
+import linkedinDark from '../../assets/linkedin-dark.svg';
+import CV from '../../assets/Jesse Hoppo - Software Resume.pdf';
+import {useTheme} from '../../common/ThemeContext';
 
 function Hero() {
-    const {theme, toggleTheme} = useTheme();
+  const {theme} = useTheme();
 
-    const themeIcon = theme === 'light' ? sun : moon;
-    const twitterIcon = theme === 'light' ? twitterLight : twitterDark;
-    const githubIcon = theme === 'light' ? githubLight : githubDark;
-    const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
+  const githubIcon = theme === 'light' ? githubLight : githubDark;
+  const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
   return (
     <section id="hero" className={styles.container}>
-        <div className={styles.colorModeContainer}>
-            <img 
-                className={styles.hero} 
-                src={heroImg} 
-                alt="Profile Picture of Jesse Hoppo" 
-            />
-            <img    
-                className={styles.colorMode} 
-                src={themeIcon} 
-                alt="Color Mode Icon"
-                onClick={toggleTheme} 
-            />
-        </div>
+      <div className={styles.heroContent}>
+        <p className={styles.eyebrow}>Software Engineer • Adelaide, Australia</p>
 
-        <div className={styles.info}>
-            <h1>
-                Jesse Hoppo
-            </h1>
-            <h2>Software Engineer</h2>
-            <span>
-                <a href="https://twitter.com/TheScottishClub" target="_blank" rel="noopener noreferrer">
-                    <img src={twitterIcon} alt="Twitter Icon" />
-                </a>
+        <h1 className={styles.title}>
+          Hello, I&apos;m <span>Jesse</span>.
+        </h1>
 
-                <a href="https://github.com/Jesse-11" target="_blank" rel="noopener noreferrer">
-                    <img src={githubIcon} alt="Github Icon" />
-                </a>
+        <p className={styles.description}>
+          I am a Software Engineering Honours student and SWE Intern at AEMO,
+          with a strong interest in infrastructure automation, observability,
+          reliable delivery, and software that solves real workflow problems.
+        </p>
 
-                <a href="https://linkedin.com/in/jesse11" target="_blank" rel="noopener noreferrer">
-                    <img src={linkedinIcon} alt="Linkedin Icon" />
-                </a>
-            </span>
-            
-            <p className={styles.description}>
-                Software engineering student and AEMO intern focused on backend systems,
-                infrastructure automation, observability, and reliable developer workflows.
-            </p>
+        <div className={styles.actions}>
+          <a
+            href={CV}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`button ${styles.resumeLink}`}
+          >
+            View Resume
+          </a>
 
-            <a href={CV} download>
-                <button className="button">
-                    Resume
-                </button>
+          <div className={styles.socialLinks}>
+            <a
+              href="https://github.com/Jesse-11"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+            >
+              <img src={githubIcon} alt="" aria-hidden="true" />
+              <span>GitHub</span>
             </a>
+
+            <a
+              href="https://linkedin.com/in/jesse11"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.socialLink}
+            >
+              <img src={linkedinIcon} alt="" aria-hidden="true" />
+              <span>LinkedIn</span>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
   );
 }
 
-export default Hero
+export default Hero;

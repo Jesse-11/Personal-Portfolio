@@ -1,5 +1,8 @@
 import { useRef, useState } from 'react';
 import styles from './NavBar.module.css';
+import sun from '../assets/sun.svg';
+import moon from '../assets/moon.svg';
+import { useTheme } from './ThemeContext';
 
 const navItems = [
   { label: 'About', href: '#about' },
@@ -12,6 +15,8 @@ const navItems = [
 function NavBar() {
   const navRef = useRef(null);
   const [indicator, setIndicator] = useState({ left: 0, width: 0, visible: false });
+  const { theme, toggleTheme } = useTheme();
+  const themeIcon = theme === 'light' ? sun : moon;
 
   const moveIndicator = (event) => {
     const navBounds = navRef.current?.getBoundingClientRect();
@@ -62,6 +67,14 @@ function NavBar() {
           }}
         />
       </nav>
+      <button
+        type="button"
+        className={styles.themeToggle}
+        aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+        onClick={toggleTheme}
+      >
+        <img src={themeIcon} alt="" aria-hidden="true" />
+      </button>
     </header>
   );
 }

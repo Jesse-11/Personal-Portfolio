@@ -1,4 +1,5 @@
 import styles from './ContactStyles.module.css';
+import CV from '../../assets/Jesse Hoppo - Software Resume.pdf';
 
 function Contact() {
   return (
@@ -20,6 +21,9 @@ function Contact() {
             </a>
             <a href="https://github.com/Jesse-11" target="_blank" rel="noopener noreferrer">
               GitHub
+            </a>
+            <a className={styles.resumeDownload} href={CV} download>
+              Download Resume
             </a>
           </div>
         </div>
