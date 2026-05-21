@@ -13,9 +13,9 @@ function Projects() {
     {
       src: InFlow,
       codeUrl: "https://github.com/Jesse-11/InFlow",
-      demoUrl: "",
+      demoUrl: "https://inflow-demo.vercel.app/",
       title: "InFlow",
-      status: "Private MVP",
+      status: "Live MVP",
       isPrivate: true,
       description: "Accounts receivable SaaS MVP with invoice/customer workflows, payment forecasting, reminder automation, CSV import, local demo persistence, and an Auth.js workspace foundation.",
       technologies: ["Next.js App Router", "TypeScript", "React", "Prisma", "PostgreSQL", "Auth.js", "Tailwind CSS", "Vitest", "CSV Import"]
