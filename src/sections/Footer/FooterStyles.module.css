@@ -3,7 +3,10 @@
 .footer {
   font-family: 'Roboto Mono', monospace;
   font-size: 0.8rem;
-  opacity: 0.5;
+  margin: 0 auto;
+  max-width: var(--container-width);
+  opacity: 0.72;
+  padding: 0 18px;
   text-align: center;
   width: 100%;
   color: var(--footer-text-color);

@@ -1,51 +1,30 @@
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 24px 80px;
+  max-width: var(--container-width);
+  padding: 38px 18px 34px;
 }
 
-.intro {
-  color: var(--form-text-color);
-  line-height: 1.7;
-  margin: 0 auto 48px;
-  max-width: 74ch;
-  text-align: center;
-}
-
-.timeline {
+.experienceList {
   display: grid;
-  gap: 22px;
+  gap: 18px;
 }
 
 .experienceCard {
-  background:
-    linear-gradient(135deg, rgba(93, 93, 255, 0.08), transparent 46%),
-    linear-gradient(180deg, var(--accent-secondary-soft), transparent 44%);
+  background-color: var(--surface-color);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-control);
-  display: grid;
-  gap: 22px;
-  grid-template-columns: 180px minmax(0, 1fr);
+  border-radius: var(--radius-md);
   padding: 24px;
+  position: relative;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .experienceCard:hover {
-  border-color: var(--accent-color);
+  background:
+    linear-gradient(var(--surface-color), var(--surface-color)) padding-box,
+    var(--rainbow-gradient) border-box;
+  border-color: transparent;
   box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
-}
-
-.cardMeta span {
-  background-color: var(--accent-secondary-soft);
-  border: 1px solid var(--accent-secondary-border);
-  border-radius: 999px;
-  color: var(--text-color);
-  display: inline-flex;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 8px 12px;
+  transform: translateY(-1px);
 }
 
 .cardBody {
@@ -54,8 +33,15 @@
   gap: 16px;
 }
 
+.cardHeader {
+  align-items: start;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
 .cardHeader h2 {
-  font-size: 1.12rem;
+  font-size: 1.08rem;
   line-height: 1.35;
   text-transform: none;
 }
@@ -67,26 +53,75 @@
 }
 
 .cardHeader p {
-  font-size: 0.92rem;
-  margin-top: 4px;
+  font-size: 0.88rem;
+  margin-top: 5px;
+}
+
+.cardHeader a {
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cardHeader a:hover,
+.cardHeader a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cardMeta {
+  color: var(--footer-text-color);
+  flex: 0 0 auto;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding-top: 3px;
 }
 
 .summary {
-  font-size: 0.95rem;
+  font-size: 0.94rem;
 }
 
 .highlights {
-  color: var(--text-color);
   display: grid;
   gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
   margin: 0;
-  padding-left: 20px;
+  padding: 0;
 }
 
 .highlights li {
+  background-color: var(--surface-soft-color);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-color);
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
   font-family: 'Roboto Mono', monospace;
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   line-height: 1.55;
+  padding: 12px;
+}
+
+.highlights li:nth-child(2n) {
+  border-left-color: var(--accent-teal-color);
+}
+
+.highlights li:nth-child(3n) {
+  border-left-color: var(--accent-warm-color);
+}
+
+.highlights li:nth-child(4n) {
+  border-left-color: var(--accent-rose-color);
+}
+
+.highlightIndex {
+  color: var(--accent-teal-color);
+  font-size: 0.72rem;
+  font-weight: 800;
 }
 
 .tags {
@@ -96,26 +131,31 @@
 }
 
 .tags span {
-  background-color: rgba(128, 128, 128, 0.1);
+  background-color: var(--surface-soft-color);
+  border: 1px solid var(--border-color);
   border-radius: 999px;
   color: var(--form-text-color);
   font-family: 'Roboto Mono', monospace;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  padding: 7px 10px;
+  padding: 5px 9px;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 80px 16px 60px;
-  }
-
-  .intro {
-    margin-bottom: 36px;
+    padding: 38px 16px 28px;
   }
 
   .experienceCard {
-    grid-template-columns: minmax(0, 1fr);
     padding: 20px;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .highlights {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

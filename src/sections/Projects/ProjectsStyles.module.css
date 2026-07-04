@@ -1,13 +1,13 @@
 .projects {
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 100px 24px 60px;
+  padding: 38px 18px 34px;
 }
 
 .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .projectsContainer > div {
@@ -20,6 +20,12 @@
   }
   
   .projects {
-    padding: 80px 16px 40px;
+    padding: 38px 16px 28px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+  .projectsContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

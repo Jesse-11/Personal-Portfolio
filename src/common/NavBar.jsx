@@ -5,7 +5,6 @@ import moon from '../assets/moon.svg';
 import { useTheme } from './ThemeContext';
 
 const navItems = [
-  { label: 'About', href: '#about' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
@@ -39,9 +38,6 @@ function NavBar() {
 
   return (
     <header className={styles.header}>
-      <a className={styles.brand} href="#hero" aria-label="Back to top">
-        JH
-      </a>
       <nav
         ref={navRef}
         className={styles.nav}

@@ -1,48 +1,34 @@
 .header {
   align-items: center;
-  backdrop-filter: blur(16px);
-  background-color: color-mix(in srgb, var(--background-color) 86%, transparent);
+  backdrop-filter: blur(18px);
+  background-color: color-mix(in srgb, var(--background-color) 88%, transparent);
   border: 1px solid var(--border-color);
-  border-radius: 999px;
+  border-radius: var(--radius-control);
   display: flex;
-  gap: 18px;
+  gap: 10px;
   left: 50%;
-  padding: 8px 10px 8px 16px;
+  padding: 10px 8px 10px 12px;
   position: fixed;
-  top: 18px;
+  top: 20px;
   transform: translateX(-50%);
-  width: min(calc(100% - 32px), 760px);
+  width: max-content;
+  max-width: calc(100% - 28px);
   z-index: 20;
-}
-
-.brand {
-  align-items: center;
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color));
-  border-radius: 999px;
-  color: #fff;
-  display: inline-flex;
-  flex: 0 0 38px;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 0.82rem;
-  font-weight: 800;
-  height: 38px;
-  justify-content: center;
-  text-decoration: none;
 }
 
 .nav {
   display: flex;
-  flex: 1;
-  justify-content: space-between;
+  gap: 6px;
+  justify-content: center;
   position: relative;
 }
 
 .nav a {
-  color: var(--text-color);
+  color: var(--form-text-color);
   font-family: 'Roboto Mono', monospace;
-  font-size: 0.84rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  padding: 12px 10px;
+  padding: 10px 12px;
   position: relative;
   text-decoration: none;
   transition: color var(--transition-fast);
@@ -51,15 +37,15 @@
 
 .nav a:hover,
 .nav a:focus-visible {
-  color: var(--accent-color);
+  color: var(--text-color);
   outline: none;
 }
 
 .indicator {
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary-color));
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-blue-color));
   border-radius: 999px;
-  bottom: 5px;
-  height: 3px;
+  bottom: 1px;
+  height: 2px;
   left: 0;
   pointer-events: none;
   position: absolute;
@@ -68,41 +54,38 @@
 
 .themeToggle {
   align-items: center;
-  background-color: transparent;
-  border: 1px solid var(--border-color);
-  border-radius: 999px;
+  background:
+    linear-gradient(var(--surface-color), var(--surface-color)) padding-box,
+    var(--rainbow-gradient) border-box;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
   cursor: pointer;
   display: inline-flex;
-  flex: 0 0 38px;
-  height: 38px;
+  flex: 0 0 34px;
+  height: 34px;
   justify-content: center;
   padding: 0;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
 }
 
 .themeToggle img {
-  height: 19px;
-  width: 19px;
+  height: 16px;
+  width: 16px;
 }
 
 .themeToggle:hover,
 .themeToggle:focus-visible {
-  border-color: var(--accent-color);
   box-shadow: var(--shadow-md);
+  filter: saturate(1.18);
   outline: none;
-  transform: translateY(-2px);
+  transform: translateY(-1px) rotate(4deg);
 }
 
 @media (max-width: 560px) {
   .header {
-    gap: 6px;
-    padding: 7px 8px;
-    width: min(calc(100% - 20px), 420px);
-  }
-
-  .brand {
-    flex-basis: 34px;
-    height: 34px;
+    gap: 4px;
+    padding: 8px;
+    width: min(calc(100% - 16px), 420px);
   }
 
   .themeToggle {
@@ -116,22 +99,14 @@
   }
 
   .nav a {
-    font-size: 0.68rem;
-    padding: 11px 4px;
+    font-size: 0.72rem;
+    padding: 10px 7px;
   }
 }
 
 @media (max-width: 400px) {
-  .header {
-    width: min(calc(100% - 12px), 420px);
-  }
-
-  .brand {
-    display: none;
-  }
-
   .nav a {
-    font-size: 0.6rem;
-    padding: 10px 2px;
+    font-size: 0.66rem;
+    padding: 10px 5px;
   }
 }

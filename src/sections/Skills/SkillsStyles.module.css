@@ -1,44 +1,79 @@
 .container {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  max-width: 1200px;
+  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 100px 24px 80px;
+  padding: 38px 18px 34px;
 }
 
 .intro {
   color: var(--form-text-color);
+  font-size: 1rem;
   line-height: 1.7;
-  margin: 0 auto 44px;
-  max-width: 76ch;
-}
-
-.skillsWrapper {
-  display: grid;
-  align-items: stretch;
-  gap: 22px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 0 0 24px;
+  max-width: 74ch;
   text-align: left;
 }
 
+.skillsCarousel {
+  overflow: hidden;
+  padding: 2px 0 14px;
+  position: relative;
+}
+
+.skillsCarousel::before,
+.skillsCarousel::after {
+  content: '';
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 64px;
+  z-index: 1;
+}
+
+.skillsCarousel::before {
+  background: linear-gradient(90deg, var(--background-color), transparent);
+  left: 0;
+}
+
+.skillsCarousel::after {
+  background: linear-gradient(270deg, var(--background-color), transparent);
+  right: 0;
+}
+
+.skillsTrack {
+  animation: marqueeSkills 42s linear infinite;
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+.skillsCarousel:hover .skillsTrack,
+.skillsCarousel:focus-within .skillsTrack {
+  animation-play-state: paused;
+}
+
 .skillCard {
-  background:
-    linear-gradient(180deg, rgba(93, 93, 255, 0.08), transparent 42%),
-    linear-gradient(135deg, var(--accent-secondary-soft), transparent 36%);
+  background-color: var(--surface-color);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-control);
+  border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding: 22px;
+  flex: 0 0 360px;
+  gap: 14px;
+  min-height: 260px;
+  padding: 20px;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .skillCard:hover {
-  border-color: var(--accent-color);
+  background:
+    linear-gradient(var(--surface-color), var(--surface-color)) padding-box,
+    var(--rainbow-gradient) border-box;
+  border-color: transparent;
   box-shadow: var(--shadow-md);
-  transform: translateY(-4px);
+  transform: translateY(-1px);
 }
 
 .skillCardHeader {
@@ -49,15 +84,16 @@
 
 .skillCardHeader span {
   align-items: center;
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color));
-  border-radius: var(--radius-md);
-  color: #fff;
+  background-color: var(--surface-soft-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--accent-color);
   display: inline-flex;
-  flex: 0 0 42px;
+  flex: 0 0 38px;
   font-family: 'Roboto Mono', monospace;
   font-size: 0.8rem;
   font-weight: 800;
-  height: 42px;
+  height: 38px;
   justify-content: center;
 }
 
@@ -83,23 +119,35 @@
   font-family: 'Roboto Mono', monospace;
   font-size: 0.78rem;
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background-color: rgba(93, 93, 255, 0.08);
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  background-color: var(--surface-soft-color);
 }
 
-@media (max-width: 980px) {
-  .skillsWrapper {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@keyframes marqueeSkills {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skillsTrack {
+    animation: none;
+    flex-wrap: wrap;
+    width: auto;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 80px 16px 60px;
+    padding: 38px 16px 28px;
   }
 
-  .skillsWrapper {
-    grid-template-columns: minmax(0, 1fr);
+  .skillCard {
+    flex-basis: 290px;
   }
 }

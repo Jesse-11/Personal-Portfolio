@@ -36,27 +36,37 @@ function Skills() {
 
   return (
     <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">Skills</h1>
-      <p className={styles.intro}>
-        A focused technical toolkit across systems programming, backend services,
-        infrastructure, security, and user-facing product work.
-      </p>
+      <div className={styles.sectionHeader}>
+        <div>
+          <h1 className="sectionTitle">Skills</h1>
+          <p className={styles.intro}>
+            A focused technical toolkit across systems programming, backend services,
+            infrastructure, security, and user-facing product work.
+          </p>
+        </div>
+      </div>
 
-      <div className={styles.skillsWrapper}>
-        {skillGroups.map((group) => (
-          <article key={group.title} className={`${styles.skillCard} revealOnScroll`}>
-            <div className={styles.skillCardHeader}>
-              <span>{group.title.slice(0, 2)}</span>
-              <h2>{group.title}</h2>
-            </div>
-            <p>{group.summary}</p>
-            <div className={styles.skillList}>
-              {group.skills.map((skill) => (
-                <span key={skill} className={styles.skillItem}>{skill}</span>
-              ))}
-            </div>
-          </article>
-        ))}
+      <div className={styles.skillsCarousel}>
+        <div className={styles.skillsTrack}>
+          {[...skillGroups, ...skillGroups].map((group, index) => (
+            <article
+              key={`${group.title}-${index}`}
+              className={styles.skillCard}
+              aria-hidden={index >= skillGroups.length ? 'true' : undefined}
+            >
+              <div className={styles.skillCardHeader}>
+                <span>{group.title.slice(0, 2)}</span>
+                <h2>{group.title}</h2>
+              </div>
+              <p>{group.summary}</p>
+              <div className={styles.skillList}>
+                {group.skills.map((skill) => (
+                  <span key={skill} className={styles.skillItem}>{skill}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

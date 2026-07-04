@@ -1,0 +1,152 @@
+.background {
+  background:
+    linear-gradient(90deg, rgba(109, 93, 252, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(34, 184, 166, 0.045) 1px, transparent 1px);
+  background-size: 54px 54px;
+  inset: 0;
+  opacity: 0.82;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+.background::before {
+  content: '';
+  background: radial-gradient(circle, rgba(109, 93, 252, 0.42) 0 4px, rgba(47, 128, 237, 0.2) 9px, transparent 23px);
+  height: 46px;
+  left: var(--pointer-x, 50vw);
+  opacity: 0.7;
+  position: fixed;
+  top: var(--pointer-y, 30vh);
+  transform: translate(-50%, -50%);
+  width: 46px;
+}
+
+[data-theme='dark'] .background {
+  background:
+    linear-gradient(90deg, rgba(245, 242, 236, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(245, 242, 236, 0.04) 1px, transparent 1px);
+  background-size: 54px 54px;
+}
+
+.trailDot {
+  border-radius: 999px;
+  height: 9px;
+  left: 50vw;
+  position: fixed;
+  top: 30vh;
+  transform: translate(-50%, -50%);
+  width: 9px;
+}
+
+.trailDotOne {
+  background-color: rgba(109, 93, 252, 0.82);
+  left: var(--trail-1-x, 50vw);
+  top: var(--trail-1-y, 30vh);
+}
+
+.trailDotTwo {
+  background-color: rgba(47, 128, 237, 0.62);
+  height: 7px;
+  left: var(--trail-2-x, 50vw);
+  top: var(--trail-2-y, 30vh);
+  width: 7px;
+}
+
+.trailDotThree {
+  background-color: rgba(34, 184, 166, 0.48);
+  height: 6px;
+  left: var(--trail-3-x, 50vw);
+  top: var(--trail-3-y, 30vh);
+  width: 6px;
+}
+
+.trailDotFour {
+  background-color: rgba(244, 184, 74, 0.34);
+  height: 5.5px;
+  left: var(--trail-4-x, 50vw);
+  top: var(--trail-4-y, 30vh);
+  width: 5.5px;
+}
+
+[data-theme='dark'] .background::before {
+  background: radial-gradient(circle, rgba(109, 93, 252, 0.54) 0 4px, rgba(47, 128, 237, 0.28) 9px, transparent 24px);
+}
+
+.trailDotFive {
+  background-color: rgba(255, 122, 144, 0.3);
+  height: 5px;
+  left: var(--trail-5-x, 50vw);
+  top: var(--trail-5-y, 30vh);
+  width: 5px;
+}
+
+.trailDotSix {
+  background-color: rgba(109, 93, 252, 0.24);
+  height: 4.5px;
+  left: var(--trail-6-x, 50vw);
+  top: var(--trail-6-y, 30vh);
+  width: 4.5px;
+}
+
+.trailDotSeven {
+  background-color: rgba(47, 128, 237, 0.2);
+  height: 4px;
+  left: var(--trail-7-x, 50vw);
+  top: var(--trail-7-y, 30vh);
+  width: 4px;
+}
+
+.trailDotEight {
+  background-color: rgba(34, 184, 166, 0.16);
+  height: 3.5px;
+  left: var(--trail-8-x, 50vw);
+  top: var(--trail-8-y, 30vh);
+  width: 3.5px;
+}
+
+[data-theme='dark'] .trailDotOne {
+  background-color: rgba(109, 93, 252, 0.9);
+}
+
+[data-theme='dark'] .trailDotTwo {
+  background-color: rgba(47, 128, 237, 0.74);
+}
+
+[data-theme='dark'] .trailDotThree {
+  background-color: rgba(34, 184, 166, 0.62);
+}
+
+[data-theme='dark'] .trailDotFour {
+  background-color: rgba(244, 184, 74, 0.44);
+}
+
+[data-theme='dark'] .trailDotFive {
+  background-color: rgba(255, 122, 144, 0.38);
+}
+
+[data-theme='dark'] .trailDotSix {
+  background-color: rgba(109, 93, 252, 0.32);
+}
+
+[data-theme='dark'] .trailDotSeven {
+  background-color: rgba(47, 128, 237, 0.28);
+}
+
+[data-theme='dark'] .trailDotEight {
+  background-color: rgba(34, 184, 166, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce), (pointer: coarse) {
+  .background {
+    background:
+      linear-gradient(90deg, rgba(109, 93, 252, 0.045) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(34, 184, 166, 0.04) 1px, transparent 1px);
+    background-size: 54px 54px;
+  }
+
+  .background::before,
+  .trailDot {
+    display: none;
+  }
+}
