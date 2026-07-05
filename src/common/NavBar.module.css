@@ -83,9 +83,11 @@
 
 @media (max-width: 560px) {
   .header {
-    gap: 4px;
-    padding: 8px;
-    width: min(calc(100% - 16px), 420px);
+    gap: 5px;
+    justify-content: center;
+    padding: 7px;
+    top: 10px;
+    width: min(calc(100% - 12px), 420px);
   }
 
   .themeToggle {
@@ -99,14 +101,30 @@
   }
 
   .nav a {
-    font-size: 0.72rem;
-    padding: 10px 7px;
+    font-size: 0.68rem;
+    padding: 9px 5px;
   }
 }
 
 @media (max-width: 400px) {
   .nav a {
-    font-size: 0.66rem;
-    padding: 10px 5px;
+    font-size: 0.61rem;
+    padding: 9px 3px;
+  }
+
+  .themeToggle {
+    flex-basis: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 340px) {
+  .nav {
+    gap: 2px;
+  }
+
+  .nav a {
+    font-size: 0.57rem;
+    padding: 8px 2px;
   }
 }

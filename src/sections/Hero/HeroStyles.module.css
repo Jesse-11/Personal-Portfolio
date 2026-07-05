@@ -124,7 +124,30 @@
 
 @media (max-width: 680px) {
   .container {
-    padding: 116px 16px 26px;
+    padding: 104px 16px 24px;
+  }
+
+  .heroContent::before {
+    top: -22px;
+  }
+
+  .title {
+    font-size: clamp(2.65rem, 15vw, 4.2rem);
+    line-height: 1;
+  }
+
+  .description {
+    font-size: 0.94rem;
+    max-width: 100%;
+  }
+
+  .focusAreas {
+    gap: 7px;
+  }
+
+  .focusAreas span {
+    font-size: 0.68rem;
+    padding: 6px 8px;
   }
 }
 
@@ -136,6 +159,17 @@
 
   .resumeLink,
   .socialLink {
+    min-width: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .title {
+    font-size: clamp(2.35rem, 14vw, 3rem);
+  }
+
+  .eyebrow {
+    font-size: 0.68rem;
   }
 }

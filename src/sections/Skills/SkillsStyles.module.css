@@ -148,6 +148,17 @@
   }
 
   .skillCard {
-    flex-basis: 290px;
+    flex-basis: min(82vw, 300px);
+    min-height: 244px;
+    padding: 18px;
+  }
+
+  .skillsCarousel::before,
+  .skillsCarousel::after {
+    width: 28px;
+  }
+
+  .intro {
+    font-size: 0.92rem;
   }
 }

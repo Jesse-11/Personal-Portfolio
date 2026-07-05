@@ -166,3 +166,26 @@
     color: var(--footer-text-color);
     cursor: not-allowed;
   }
+
+@media (max-width: 540px) {
+  .projectImage {
+    height: 118px;
+  }
+
+  .projectInfo {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .projectDescription {
+    font-size: 0.78rem;
+  }
+
+  .projectActions {
+    flex-direction: column;
+  }
+
+  .technologyTag {
+    font-size: 0.66rem;
+  }
+}

@@ -147,7 +147,7 @@
   }
 
   .experienceCard {
-    padding: 20px;
+    padding: 18px;
   }
 
   .cardHeader {
@@ -157,5 +157,29 @@
 
   .highlights {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .highlights li {
+    font-size: 0.78rem;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 11px;
+  }
+
+  .highlightIndex {
+    font-size: 0.7rem;
+  }
+
+  .tags span {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .cardHeader h2 {
+    font-size: 0.98rem;
+  }
+
+  .summary {
+    font-size: 0.86rem;
   }
 }

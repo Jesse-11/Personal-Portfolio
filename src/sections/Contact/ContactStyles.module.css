@@ -162,6 +162,14 @@
   .formRow {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .contactInfo h2 {
+    font-size: clamp(1.25rem, 8vw, 1.75rem);
+  }
+
+  .contactLinks a {
+    overflow-wrap: anywhere;
+  }
 }
 
 @media (max-width: 480px) {
