@@ -4,10 +4,9 @@
   font-family: 'Roboto Mono', monospace;
   font-size: 0.8rem;
   margin: 0 auto;
-  max-width: var(--container-width);
   opacity: 0.72;
-  padding: 0 18px;
+  padding: 0;
   text-align: center;
-  width: 100%;
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
   color: var(--footer-text-color);
 }

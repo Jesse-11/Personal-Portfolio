@@ -24,6 +24,7 @@
     --radius-control: 8px;
     --rainbow-gradient: linear-gradient(90deg, var(--accent-color), var(--accent-blue-color), var(--accent-teal-color), var(--accent-warm-color), var(--accent-rose-color));
     --container-width: 1160px;
+    --page-gutter: clamp(16px, 4vw, 28px);
     --transition-fast: 0.18s ease;
 }
 
@@ -67,6 +68,8 @@ body {
     flex-direction: column;
     gap: 34px;
     min-height: 100vh;
+    min-width: 0;
+    overflow-x: clip;
     position: relative;
     z-index: 1;
 }

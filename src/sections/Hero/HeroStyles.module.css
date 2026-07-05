@@ -1,8 +1,7 @@
 .container {
   margin: 0 auto;
-  max-width: var(--container-width);
-  padding: 142px 24px 54px;
-  width: 100%;
+  padding: 142px 0 54px;
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
 }
 
 .heroContent {
@@ -124,11 +123,19 @@
 
 @media (max-width: 680px) {
   .container {
-    padding: 104px 16px 24px;
+    padding: 104px 0 24px;
   }
 
   .heroContent::before {
+    left: 50%;
     top: -22px;
+    transform: translateX(-50%);
+  }
+
+  .copy {
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .title {
@@ -143,6 +150,7 @@
 
   .focusAreas {
     gap: 7px;
+    justify-content: center;
   }
 
   .focusAreas span {

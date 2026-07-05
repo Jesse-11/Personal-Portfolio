@@ -1,7 +1,7 @@
 .container {
-  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 38px 18px 42px;
+  padding: 38px 0 42px;
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
 }
 
 .contactShell {
@@ -151,7 +151,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 38px 16px 42px;
+    padding: 38px 0 42px;
   }
   
   .contactShell {

@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
-  max-width: var(--container-width);
-  padding: 38px 18px 34px;
+  padding: 38px 0 34px;
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
 }
 
 .experienceList {
@@ -143,7 +143,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 38px 16px 28px;
+    padding: 38px 0 28px;
   }
 
   .experienceCard {

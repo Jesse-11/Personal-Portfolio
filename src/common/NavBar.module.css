@@ -104,6 +104,10 @@
     font-size: 0.68rem;
     padding: 9px 5px;
   }
+
+  .indicator {
+    display: none;
+  }
 }
 
 @media (max-width: 400px) {

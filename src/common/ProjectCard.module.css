@@ -168,6 +168,10 @@
   }
 
 @media (max-width: 540px) {
+  .projectCard {
+    width: 100%;
+  }
+
   .projectImage {
     height: 118px;
   }

@@ -1,7 +1,7 @@
 .projects {
-  max-width: var(--container-width);
   margin: 0 auto;
-  padding: 38px 18px 34px;
+  padding: 38px 0 34px;
+  width: min(calc(100% - (var(--page-gutter) * 2)), var(--container-width));
 }
 
 .projectsContainer {
@@ -21,7 +21,7 @@
   }
   
   .projects {
-    padding: 38px 16px 28px;
+    padding: 38px 0 28px;
   }
 }
 
